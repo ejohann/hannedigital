@@ -1,0 +1,1 @@
+Basic responsive wordpress theme.
