@@ -9,25 +9,11 @@
   add_image_size('banner-image', 1084, 210, true);
   
   //register menu 
- /* function register_my_menus()
-   {
-     register_nav_menus( 
-     	array(
-     	 'main-menu' => _('Primary Menu'),
-     	 'footer-menu' => _('Footer Menu')
-     	 )
-     	 );
-   }
-   add_action('init','register_my_menus');
- 
-   */
-   
-   function set_menu_areas()
+   function set_menu_area()
     {
       register_nav_menu('main-menu','Primary Menu');
-      register_nav_menu('footer-menu','Footer Menu');
     }
-  add_action('init','set_menu_areas');
+  add_action('init','set_menu_area');
   
   // Register Sidebar
   register_sidebar(array(

@@ -2,9 +2,10 @@
  <?php get_header(); ?>
  <div class='page_content'>
    <div class='inner_content'>
-     <div class='page_title'>
+     
+    <div class='page_title'>
        <h1>Search results for: <i><?php the_search_query(); ?>  </i></h1>       
-     </div>
+     </div>  <!-- CLOSE PAGE TITLE -->
    
        <div class='blog'>
          <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -15,7 +16,7 @@
                           ?>'>
            <div class='post_thumbnail'>
                           <?php the_post_thumbnail('small-thumbnail'); ?>
-           </div>
+           </div> <!-- CLOSE THUMBNAIL -->
                           <h2 class='title'>
              <a href="<?php the_permalink(); ?>"> 
                <?php the_title(); ?> 
@@ -26,26 +27,29 @@
                           <?php the_author() ?> 
                        </a> 
              on the <?php the_time('dS, F, Y'); ?> 
-           </div>
+           </div> <!-- CLOSE AUTHOR -->
          
            <p>
              <?php the_excerpt(); ?>
-           </p>
+           </p> 
+           
            <div class='btn'>
              <a href="<?php the_permalink() ?>">Read More --> 
              </a>
-           </div>
-         </div>
+           </div> <!-- CLOSE BUTTON -->
+            
+         </div> <!-- CLOSE POST -->
          <?php endwhile; else: ?>
          <p style='margin-top: 20px;'>
           No posts match your search criteria.  Please search again.
           </p>
          <?php endif; ?>   
-       </div>
+       </div> <!-- CLOSE BLOG -->
    
      
-     <div class='clearfix'>
-     </div>
-   </div>
- </div>
+     <div class='clearfix'></div>
+   
+     </div> <!-- CLOSE INNER CONTENT -->
+   
+ </div>  <!-- CLOSE PAGE CONTENT -->
  <?php get_footer(); ?>

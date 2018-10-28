@@ -12,18 +12,20 @@
   </head>
   <body>
     <div class='container'>
-      <header class='site_header'>
+      
+     <header class='site_header'>
         <h1>
           <a href="<?php echo home_url(); ?>"><?php bloginfo('name') ?></a>
         </h1>
+        
         <div class='top_search'>
           <?php get_search_form(); ?>
-        </div>
-        <div class='clearfix'></div>
+        </div> <!-- CLOSE TOP SEARCH -->
         
-        <!-- a href='http://localhost/wp/'><h1>HD LOGO</h1></a -->  
-      </header>
-      <nav class='main_nav'> 
+        <div class='clearfix'></div> 
+     </header>
+     
+     <nav class='main_nav'> 
         <?php 
           wp_nav_menu(array(' theme_location' => 'main-menu' ));
         ?>
